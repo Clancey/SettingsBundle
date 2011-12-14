@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingsBundle", "SettingsBundle\SettingsBundle.csproj", "{5074613B-8055-4E2F-A032-15689785D062}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5074613B-8055-4E2F-A032-15689785D062}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{5074613B-8055-4E2F-A032-15689785D062}.Debug|iPhone.Build.0 = Debug|iPhone
+		{5074613B-8055-4E2F-A032-15689785D062}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{5074613B-8055-4E2F-A032-15689785D062}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{5074613B-8055-4E2F-A032-15689785D062}.Release|iPhone.ActiveCfg = Release|iPhone
+		{5074613B-8055-4E2F-A032-15689785D062}.Release|iPhone.Build.0 = Release|iPhone
+		{5074613B-8055-4E2F-A032-15689785D062}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{5074613B-8055-4E2F-A032-15689785D062}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = SettingsBundle\SettingsBundle.csproj
+	EndGlobalSection
+EndGlobal
