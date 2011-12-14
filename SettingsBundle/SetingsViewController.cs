@@ -19,6 +19,7 @@ namespace SettingsBundle
 		BooleanElement airplaneModeElement;
 		EntryElement userNameElement;
 		EntryElement passwordElement;
+		EntryElement privateElement;
 		RootElement CreateRoot ()
 		{
 			airplaneModeElement = new BooleanElement ("Airplane Mode", false);
@@ -33,6 +34,10 @@ namespace SettingsBundle
 			passwordElement.Changed += delegate {
 				Password = passwordElement.Value;
 			};
+			privateElement = new EntryElement("Private","Not in public settings","");
+			privateElement.Changed += delegate {
+				PrivateString = privateElement.Value;
+			};
 			return new RootElement ("Settings") {
 				new Section (){
 					airplaneModeElement,
@@ -41,6 +46,9 @@ namespace SettingsBundle
 					userNameElement,
 					passwordElement,
 				},
+				new Section(){
+					privateElement
+				}
 			};		
 		}
 		
@@ -56,6 +64,7 @@ namespace SettingsBundle
 			airplaneModeElement.Value = AirplaneMode;
 			userNameElement.Value = UserName;
 			passwordElement.Value = Password;
+			privateElement.Value = PrivateString;
 			
 			this.TableView.ReloadData();
 		}
@@ -83,6 +92,16 @@ namespace SettingsBundle
 			get {return prefs.StringForKey("Password");}
 			set {
 				prefs.SetString(value,"Password");
+				prefs.Synchronize();
+			}
+		}
+		
+		
+		public string PrivateString
+		{
+			get {return prefs.StringForKey("PrivateString");}
+			set {
+				prefs.SetString(value,"PrivateString");
 				prefs.Synchronize();
 			}
 		}
